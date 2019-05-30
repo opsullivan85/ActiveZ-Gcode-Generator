@@ -1,0 +1,33 @@
+\documentclass[border={5pt 5pt 5pt 5pt}]{standalone}
+\usepackage{mathtools}
+%\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{pagecolor}
+\definecolor{color}{HTML}{37474f}
+\pagecolor{color}
+\color{white}
+
+%\left(\right)
+\begin{document}
+$
+	\begin{matrix}
+		\Delta z(z,\theta)=a(z)\sin{\theta} + z\\
+		a(z) = a_{max}
+			\begin{cases}
+				\frac{-\cos{\frac{\pi z}{lt}}+1}{2} & t \leq a\\
+				1 & t < a < \frac{h}{l}-t\\
+				\frac{-\cos{\frac{\pi z}{lt}}+1}{2} & a \geq \frac{h}{l}-t\\
+			\end{cases}\\
+		\\
+		\hline
+		\\
+		
+		\{z|z=l\cdot n, 0 < n \leq \frac{h}{l}, n\in \mathbb{Z}\}\\
+		a_{max} \equiv \text{Max Amplitude}\\
+		t \equiv \text{Number of Transition}\\ \text{Layers}\\
+		l \equiv \text{Layer Height}\\
+		h \equiv \text{Object Height}
+	\end{matrix}
+$
+\end{document}

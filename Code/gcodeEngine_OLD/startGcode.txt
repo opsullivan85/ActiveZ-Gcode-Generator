@@ -1,0 +1,33 @@
+;FLAVOR:Marlin
+;Layer height: 0.2
+;Generated with Python
+M140 S60
+M105
+M190 S60
+M104 S195
+M105
+M109 S195
+M82 ;absolute extrusion mode
+
+G21 ;metric values
+G90 ;absolute positioning
+M82 ;set extruder to absolute mode
+M107 ;start with the fan off
+G28 X0 Y0 ;move X/Y to min endstops
+G28 Z0 ;move Z to min endstops
+
+;M206 Z0.05 ;set z home
+
+G1 Z15.0 F9000 ;move the platform down 15mm
+G92 E0 ;zero the extruded length
+G1 F9000
+
+M117 Prepping...
+G1 X20 Y20 Z0.3 ;move to start
+G1 F1200 X280 Y20 E18.54826 ;make line
+M204 S5000 ;acc 5000
+M205 X30 Y30 ;x/y jerk 30
+;G1 F3000 E15.54826 ;retract 3mm
+;G1 F300 Z1.3 ;raise up
+;G1 F3000 E18.54826 ;prime 3mm
+G92 E0 ;zero the extruded length
